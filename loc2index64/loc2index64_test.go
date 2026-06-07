@@ -255,9 +255,9 @@ func BenchmarkLoc2IndexProof(b *testing.B) {
 
 	total := 10
 	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		data := strings.Fields(scanner.Text())
-
+	scanner.Scan()
+	data := strings.Fields(scanner.Text())
+	for index := 1; index <= 5; index ++ {
 		lat, _ := new(big.Int).SetString(data[0], 16)
 		lng, _ := new(big.Int).SetString(data[1], 16)
 		res, _ := new(big.Int).SetString(data[2], 16)
