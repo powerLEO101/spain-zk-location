@@ -21,7 +21,7 @@ import (
 	"github.com/consensys/gnark/test"
 )
 
-const batchSize = 16
+const batchSize = 1
 
 // type loc2Index64Circuit struct {
 // 	// SECRET INPUTS
